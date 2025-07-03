@@ -17,22 +17,21 @@
       scroll-snap-type: y mandatory;
     }
 
-   .section {
+  .section {
   height: 100vh;
   width: 100vw;
   scroll-snap-align: start;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000;
   overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section img {
-  max-height: 100%;
-  max-width: 100%;
+  height: 100vh;
   width: auto;
-  height: 100%;
+  max-width: 100%;
   object-fit: contain;
   display: block;
 }
