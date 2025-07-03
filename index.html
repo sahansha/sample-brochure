@@ -1,30 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seef Downtown - Full Brochure</title>
-	<link rel="stylesheet" href="style.css">
-    <style>
-        <!-- body { -->
-            <!-- margin: 0; -->
-            <!-- background: #000; -->
-        <!-- } -->
-        .page-image {
-            width: 100%;
-            display: block;
-        }
-		
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seef Downtown - Scroll-Snapped Brochure</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-y: scroll;
+    }
+
+    body {
+      scroll-snap-type: y mandatory;
+    }
+
+   .section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.section img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 999;
+      padding: 10px 20px;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav a {
+      color: #fff;
+      margin-right: 16px;
+      text-decoration: none;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+  </style>
 </head>
 <body>
-    <img class="page-image" src="assets/pdf_all_pages/page_1.jpg" alt="Page page_1.jpg">
-    <img class="page-image" src="assets/pdf_all_pages/page_2.jpg" alt="Page page_2.jpg">
-    <img class="page-image" src="assets/pdf_all_pages/page_3.jpg" alt="Page page_3.jpg">
-    <img class="page-image" src="assets/pdf_all_pages/page_4.jpg" alt="Page page_4.jpg">
-    <img class="page-image" src="assets/pdf_all_pages/page_5.jpg" alt="Page page_5.jpg">
-    <img class="page-image" src="assets/pdf_all_pages/page_6.jpg" alt="Page page_6.jpg">
-    
+
+<nav>
+  <!-- You can add more links for each page -->
+  <a href="#page1">Page 1</a>
+  <a href="#page2">Page 2</a>
+  <a href="#page3">Page 3</a>
+  <!-- Add up to Page 32 as needed -->
+</nav>
+
+<!-- Each section represents one full-screen page -->
+<div class="section" id="page1">
+  <img src="assets/pdf_all_pages/page_1.jpg" alt="Page 1">
+</div>
+
+<div class="section" id="page2">
+  <img src="assets/pdf_all_pages/page_2.jpg" alt="Page 2">
+</div>
+
+<div class="section" id="page3">
+  <img src="assets/pdf_all_pages/page_3.jpg" alt="Page 3">
+</div>
+
+<!-- Repeat for all 32 pages -->
+<!-- Example:
+<div class="section" id="page4">
+  <img src="assets/pdf_all_pages/page_4.jpg" alt="Page 4">
+</div>
+-->
 
 </body>
 </html>
